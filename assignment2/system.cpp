@@ -1,22 +1,36 @@
 #include <vector>
 #include "system.h"
+#include <iostream>
+
 
 using namespace std;
 
 System::System(size_t n, size_t m, std::vector< std::vector<double> > matrix) 
 {
-	//what does the constructor need to do?	
+	m_n = n;
+	m_m = m;
+	m_matrix = matrix;
 }
 
-int getNumSolutions() //0 = zero solutions, 1 = one solution, 2 = infinite
+int System::getNumSolutions() //0 = zero solutions, 1 = one solution, 2 = infinite
 {
+	
+	return m_numsol;
 	//this is a getter	
 }
 
+
+
+
 std::vector<double> System::getSolution() //if 1 or 2 above, get a solution
 {
+	std::vector<double> answer = m_sol;
+
+	return answer;
 	//another getter
 }
+
+
 
 //adapted from 
 //https://cp-algorithms.com/linear_algebra/linear-system-gauss.html
